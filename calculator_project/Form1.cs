@@ -101,7 +101,16 @@ namespace calculator_project
         }
         private void button16_Click(object sender, EventArgs e)
         {
-            result.Text = "()";
+            string data = result.Text;
+            if(data.Contains("("))
+                {
+                result.Text = data + ")";
+            }
+            else
+            {
+                result.Text = "(" + data;
+            }
+            
 
         }
         private void button17_Click(object sender, EventArgs e)
