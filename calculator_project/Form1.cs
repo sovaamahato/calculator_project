@@ -2,6 +2,26 @@ namespace calculator_project
 {
     public partial class Form1 : Form
     {
+        string operater = "";
+        decimal calculated = 0;
+
+        public void GetResultValue()
+        {
+            if (result.Text != "" && result.Text != "+" && result.Text != "-" && result.Text != "/" && result.Text != "x")
+            {
+                calculated = Convert.ToDecimal(result.Text);
+                
+            }
+        }
+
+        //public void checkOprator()
+        //{
+        //    if (result.Text = "+" || result.Text = "-" || result.Text = "/" || result.Text != "x")
+        //    {
+
+        //    }
+
+        //}
         public Form1()
         {
             InitializeComponent();
@@ -10,6 +30,7 @@ namespace calculator_project
         private void button1_Click(object sender, EventArgs e)
 
         {
+            
             string data = result.Text;
 
             result.Text = String.Empty;
@@ -20,6 +41,7 @@ namespace calculator_project
         private void button2_Click(object sender, EventArgs e)
 
         {
+
             result.Text = "%";
 
         }
@@ -32,11 +54,15 @@ namespace calculator_project
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            result.Text = "x";
+            GetResultValue();
+            operater = "*";
+            result.Text =calculated+ "*";
 
         }
         private void button4_Click(object sender, EventArgs e)
         {
+            GetResultValue();
+            operater = "/";
             result.Text = "/";
 
         }
@@ -54,6 +80,9 @@ namespace calculator_project
         }
         private void button8_Click(object sender, EventArgs e)
         {
+           
+            GetResultValue();
+            operater = "-";
             result.Text = "-";
 
         }
@@ -77,26 +106,60 @@ namespace calculator_project
         }
         private void button12_Click(object sender, EventArgs e)
         {
-            string data = result.Text;
-            result.Text = data + "+";
+            
+            
+            
+            GetResultValue();
+            
+                
+;           operater = "+";
+            result.Text = "+";
 
         }
         private void button13_Click(object sender, EventArgs e)
         {
-            string data = result.Text;
-            result.Text =data+ "1";
+            if (result.Text =="+" || result.Text =="-" || result.Text == "/" || result.Text == "x" || result.Text == "%")
+            {
+                result.Text =  "1";
+
+            }
+            else
+            {
+                string data = result.Text;
+                result.Text = data + "1";
+
+            }
+             
 
         }
         private void button14_Click(object sender, EventArgs e)
         {
-            string data = result.Text;
-            result.Text =data+ "2";
+            if (result.Text == "+" || result.Text == "-" || result.Text == "/" || result.Text == "x" || result.Text == "%")
+            {
+                result.Text = "2";
+
+            }
+            else
+            {
+                string data = result.Text;
+                result.Text = data + "2";
+
+            }
 
         }
         private void button15_Click(object sender, EventArgs e)
         {
-            string data = result.Text;
-            result.Text = data +"3";
+            if (result.Text == "+" || result.Text == "-" || result.Text == "/" || result.Text == "x" || result.Text == "%")
+            {
+                result.Text = "3";
+
+            }
+            else
+            {
+                string data = result.Text;
+                result.Text = data + "3";
+
+            }
 
         }
         private void button16_Click(object sender, EventArgs e)
@@ -133,6 +196,38 @@ namespace calculator_project
 
         private void button20_Click(object sender, EventArgs e)
         {
+            decimal firstNum = calculated;
+            decimal secondNum = calculated;
+
+            switch(operater)
+            {
+                case "+":
+                    calculated = (firstNum + secondNum);
+                    result.Text = calculated.ToString();
+                    break;
+                case "-":
+                    calculated = (firstNum - secondNum);
+                    result.Text = calculated.ToString();
+                    break;
+                case "x":
+                    calculated = (firstNum * secondNum);
+                    result.Text = calculated.ToString();
+                    break;
+                case "/":
+                    calculated = (firstNum /secondNum);
+                    result.Text = calculated.ToString();
+                    break;
+                case "%":
+                    calculated = (firstNum % secondNum);
+                    result.Text = calculated.ToString();
+                    break;
+
+
+
+
+
+            }
+            
 
 
 
