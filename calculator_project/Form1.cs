@@ -7,7 +7,7 @@ namespace calculator_project
 
         public void GetResultValue()
         {
-            if (result.Text != "" && result.Text != "+" && result.Text != "-" && result.Text != "/" && result.Text != "x")
+            if (result.Text != "" && result.Text != "+" && result.Text != "-" && result.Text != "/" && result.Text != "*")
             {
                 calculated = Convert.ToDecimal(result.Text);
                 
@@ -107,7 +107,7 @@ namespace calculator_project
         private void button12_Click(object sender, EventArgs e)
         {
             
-            
+                                                               
             
             GetResultValue();
             
@@ -118,7 +118,7 @@ namespace calculator_project
         }
         private void button13_Click(object sender, EventArgs e)
         {
-            if (result.Text =="+" || result.Text =="-" || result.Text == "/" || result.Text == "x" || result.Text == "%")
+            if (result.Text =="+" || result.Text =="-" || result.Text == "/" || result.Text == "*" || result.Text == "%")
             {
                 result.Text =  "1";
 
@@ -134,7 +134,7 @@ namespace calculator_project
         }
         private void button14_Click(object sender, EventArgs e)
         {
-            if (result.Text == "+" || result.Text == "-" || result.Text == "/" || result.Text == "x" || result.Text == "%")
+            if (result.Text == "+" || result.Text == "-" || result.Text == "/" || result.Text == "*" || result.Text == "%")
             {
                 result.Text = "2";
 
@@ -197,7 +197,7 @@ namespace calculator_project
         private void button20_Click(object sender, EventArgs e)
         {
             decimal firstNum = calculated;
-            decimal secondNum = calculated;
+            decimal secondNum = Convert.ToDecimal(result.Text);
 
             switch(operater)
             {
@@ -209,7 +209,7 @@ namespace calculator_project
                     calculated = (firstNum - secondNum);
                     result.Text = calculated.ToString();
                     break;
-                case "x":
+                case "*":
                     calculated = (firstNum * secondNum);
                     result.Text = calculated.ToString();
                     break;
@@ -233,5 +233,6 @@ namespace calculator_project
 
 
         }
+      
     }
 }
