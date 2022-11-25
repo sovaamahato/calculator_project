@@ -45,12 +45,13 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
             this.result = new System.Windows.Forms.TextBox();
             this.button21 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,10 +78,10 @@
             this.tableLayoutPanel1.Controls.Add(this.button6, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.button4, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.button3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button14, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.button5, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button14, 1, 3);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(283, 141);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
@@ -256,16 +257,6 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(56, 157);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(61, 50);
-            this.button14.TabIndex = 13;
-            this.button14.Text = "2";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
-            // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(3, 53);
@@ -298,6 +289,16 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(56, 157);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(61, 50);
+            this.button14.TabIndex = 13;
+            this.button14.Text = "2";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
             // result
             // 
             this.result.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -316,11 +317,21 @@
             this.button21.UseVisualStyleBackColor = true;
             this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(46, 316);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 15);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Know More ...?";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(878, 497);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button21);
             this.Controls.Add(this.result);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -357,5 +368,6 @@
         private Button button14;
         private TextBox result;
         private Button button21;
+        private Label label1;
     }
 }

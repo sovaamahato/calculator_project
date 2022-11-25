@@ -48,15 +48,24 @@ namespace calculator_project
 
         private void button5_Click(object sender, EventArgs e)
         {
-            string data = result.Text;
-            result.Text = data+ "7";
+            if (result.Text == "+" || result.Text == "-" || result.Text == "/" || result.Text == "*" || result.Text == "%")
+            {
+                result.Text = "7";
+
+            }
+            else
+            {
+                string data = result.Text;
+                result.Text = data + "7";
+
+            }
 
         }
         private void button3_Click(object sender, EventArgs e)
         {
             GetResultValue();
             operater = "*";
-            result.Text =calculated+ "*";
+            result.Text = "*";
 
         }
         private void button4_Click(object sender, EventArgs e)
@@ -68,14 +77,32 @@ namespace calculator_project
         }
         private void button6_Click(object sender, EventArgs e)
         {
-            string data = result.Text;
-            result.Text = data+ "8";
+            if (result.Text == "+" || result.Text == "-" || result.Text == "/" || result.Text == "*" || result.Text == "%")
+            {
+                result.Text = "8";
+
+            }
+            else
+            {
+                string data = result.Text;
+                result.Text = data + "8";
+
+            }
 
         }
         private void button7_Click(object sender, EventArgs e)
         {
-            string data = result.Text;
-            result.Text = data+"9";
+            if (result.Text == "+" || result.Text == "-" || result.Text == "/" || result.Text == "*" || result.Text == "%")
+            {
+                result.Text = "9";
+
+            }
+            else
+            {
+                string data = result.Text;
+                result.Text = data + "9";
+
+            }
 
         }
         private void button8_Click(object sender, EventArgs e)
@@ -88,20 +115,47 @@ namespace calculator_project
         }
         private void button9_Click(object sender, EventArgs e)
         {
-            string data = result.Text;
-            result.Text = data+ "4";
+            if (result.Text == "+" || result.Text == "-" || result.Text == "/" || result.Text == "*" || result.Text == "%")
+            {
+                result.Text = "4";
+
+            }
+            else
+            {
+                string data = result.Text;
+                result.Text = data + "4";
+
+            }
 
         }
         private void button10_Click(object sender, EventArgs e)
         {
-            string data = result.Text;
-            result.Text = data +"5";
+            if (result.Text == "+" || result.Text == "-" || result.Text == "/" || result.Text == "*" || result.Text == "%")
+            {
+                result.Text = "5";
+
+            }
+            else
+            {
+                string data = result.Text;
+                result.Text = data + "5";
+
+            }
 
         }
         private void button11_Click(object sender, EventArgs e)
         {
-            string data = result.Text;
-            result.Text = data+ "6";
+            if (result.Text == "+" || result.Text == "-" || result.Text == "/" || result.Text == "*" || result.Text == "%")
+            {
+                result.Text = "6";
+
+            }
+            else
+            {
+                string data = result.Text;
+                result.Text = data + "6";
+
+            }
 
         }
         private void button12_Click(object sender, EventArgs e)
@@ -149,7 +203,7 @@ namespace calculator_project
         }
         private void button15_Click(object sender, EventArgs e)
         {
-            if (result.Text == "+" || result.Text == "-" || result.Text == "/" || result.Text == "x" || result.Text == "%")
+            if (result.Text == "+" || result.Text == "-" || result.Text == "/" || result.Text == "*" || result.Text == "%")
             {
                 result.Text = "3";
 
@@ -233,6 +287,15 @@ namespace calculator_project
 
 
         }
-      
+        private void button21_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 EmployeeForm = new Form2();
+            EmployeeForm.ShowDialog();
+            //EmployeeForm.Show();
+
+
+        }
+
     }
 }
